@@ -132,7 +132,7 @@ Configure your build system (e.g., Visual Studio, Makefile, or CMake) to include
 Here is an example test file `tests/card_test.cpp` for your Blackjack project:
 
 ```cpp
-#include "card.h"
+#include "headers/card.h"
 #include <gtest/gtest.h>
 
 TEST(CardTest, DefaultConstructor) {
