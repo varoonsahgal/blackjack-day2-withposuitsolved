@@ -1,5 +1,9 @@
 
-# Add tests
+# Pull refactored code from lab 1
+Make sure that you pull the updated code from lab 1 so that everyone is on the same starting point.
+
+
+# Setup to Add tests
 Without adequate tests, the risks of breaking things while refactoring are increased.  We need to add some tests to our code.
 
 We will use Google Test to write some test cases in C++, but first we need to install it.
@@ -43,6 +47,56 @@ For example, in a Makefile:
 ```makefile
 CXXFLAGS = -std=c++17 -I/opt/homebrew/Cellar/googletest/1.x.x/include
 LDFLAGS = -L/opt/homebrew/Cellar/googletest/1.x.x/lib -lgtest -lgtest_main -pthread
+```
+
+
+A sample Makefile that works for me is here - note that you will likely have to make modifications to the GTEST_LIBS variable to point to
+your installation of googletest:
+```makefile
+# Compiler and Flags
+CXX = g++
+CXXFLAGS = -std=c++17 -I/opt/homebrew/Cellar/googletest/1.15.2/include -I./src
+
+# Directories
+SRC_DIR = src
+TEST_DIR = src/tests
+BUILD_DIR = build
+
+# Google Test Libraries (installed via Homebrew)
+GTEST_LIBS = -L/opt/homebrew/Cellar/googletest/1.15.2/lib -lgtest -lgtest_main -pthread
+
+
+# Source Files
+APP_SRC_FILES = $(SRC_DIR)/blackjack.cpp $(SRC_DIR)/card.cpp $(SRC_DIR)/compatible.cpp \
+                $(SRC_DIR)/dealer.cpp $(SRC_DIR)/deck.cpp $(SRC_DIR)/game.cpp \
+                $(SRC_DIR)/human.cpp $(SRC_DIR)/player.cpp $(SRC_DIR)/print.cpp $(SRC_DIR)/statistics.cpp
+TEST_SRC_FILES = $(SRC_DIR)/card.cpp $(TEST_DIR)/card_test.cpp
+
+# Output Binaries
+APP_BIN = $(BUILD_DIR)/blackjack
+TEST_BIN = $(BUILD_DIR)/card_test
+
+# Rules
+all: app test
+
+# Build the main application
+app: $(APP_BIN)
+
+$(APP_BIN): $(APP_SRC_FILES)
+	mkdir -p $(BUILD_DIR)
+	$(CXX) $(CXXFLAGS) $^ -o $@
+
+# Build and run tests
+test: $(TEST_BIN)
+	./$(TEST_BIN)
+
+$(TEST_BIN): $(TEST_SRC_FILES)
+	mkdir -p $(BUILD_DIR)
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(GTEST_LIBS)
+
+# Clean build artifacts
+clean:
+	rm -rf $(BUILD_DIR)
 ```
 
 ---
