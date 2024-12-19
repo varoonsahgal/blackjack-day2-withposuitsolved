@@ -252,6 +252,10 @@ Here’s how you can set up **Google Test** in both **VS Code** and **Visual Stu
 
 ## **Adding Include Paths in Visual Studio Professional**
 
+In Visual Studio Pro, you Google Test should come preconfigured/integrated with the IDE: https://learn.microsoft.com/en-us/visualstudio/test/how-to-use-google-test-for-cpp?view=vs-2022
+
+In case it does not - read below!:
+
 ### Step 1: Open Project Properties
 1. Open your project in Visual Studio Professional.
 2. Right-click on the project in the **Solution Explorer** and select **Properties**.
