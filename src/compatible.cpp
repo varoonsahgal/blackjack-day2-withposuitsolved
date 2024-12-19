@@ -7,6 +7,10 @@
 void clearscr() {
     system("cls");
 }
+char __getch() {
+   return _getch();
+}
+
 #else
 void clearscr() {
     system("clear");
