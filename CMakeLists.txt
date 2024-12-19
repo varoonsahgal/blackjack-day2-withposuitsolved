@@ -16,4 +16,5 @@ add_executable(
     src/player.cpp
     src/print.cpp
     src/statistics.cpp
+	src/compatible.cpp
 )
