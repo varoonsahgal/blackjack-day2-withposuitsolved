@@ -69,3 +69,9 @@ blackjack
 # VSCode specific ignores
 .vscode/
 .vs/
+
+# Ignore Visual Studio build directories
+out/
+Debug/
+Release/
+x64/
