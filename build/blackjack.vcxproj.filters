@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\src\blackjack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\src\card.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\src\dealer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\src\deck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\src\game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\src\human.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\src\player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\src\print.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\src\statistics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\src\compatible.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\varoo\blackjackcpp\blackjack-cpp-starter\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CF8629C3-7C9D-3042-983B-1E301E431E49}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

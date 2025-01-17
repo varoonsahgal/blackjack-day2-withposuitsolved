@@ -77,7 +77,7 @@ bool Game::startBet(){
         while(true){
             printTop();
             std::cout << "Place your bet!\t\t $" << green << player.getBet() << def << "\n[W = Raise Bet | S = Decrease Bet | R = Done]\n";
-            int c = toupper(__getch());
+            int c = toupper(getchar());
             switch(c){
                 case 'W': if(player.getCash() >= 5){ player.setBet(5); } break;
                 case 'S': if(player.getBet() >= 5){ player.setBet(-5); } break;
@@ -104,7 +104,7 @@ bool Game::checkImmediateWin(){
 bool Game::processPlayerActions(){
     while(true){
         std::cout << lightYellow << "\n\nH : Hit | S : Stand\n" << def;
-        int c = toupper(__getch());
+        int c = toupper(getchar());
         if(c == 'H'){
             player.addCard(deck.deal());
             printBody();
@@ -298,14 +298,14 @@ void Game::printStatistics(){
     std::cout << "\n" << lightGreen << Print::statistics() << def << "\n";
     s.print();
     std::cout << "\n\n\t(Press any key to continue)\n";
-    __getch();
+    getchar();
 }
 
 void Game::printInstructions(){
     clearscr();
     std::cout << yellow << Print::title_blackjack() << def << "\n";
     std::cout << "\n" << lightGreen << Print::instructions() << def << "\n";
-    __getch();
+    getchar();
 }
 
 void Game::printTop(){

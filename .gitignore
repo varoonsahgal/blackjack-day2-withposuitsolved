@@ -68,3 +68,4 @@ blackjack
 
 # VSCode specific ignores
 .vscode/
+.vs/
