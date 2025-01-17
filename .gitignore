@@ -1,5 +1,6 @@
 # Prerequisites
 *.d
+.vs/
 
 # Compiled Object files
 *.slo
@@ -33,13 +34,13 @@
 
 # CMake
 CMakeCache.txt
-CMakeScripts
-Testing
+CMakeScripts/
+Testing/
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
-_deps
+_deps/
 
 # Meson
 meson-log.txt
@@ -62,16 +63,22 @@ blackjack
 *.suo
 *.ntvs*
 *.njsproj
-*.sln
 *.sw?
 *.vscode/
 
-# VSCode specific ignores
-.vscode/
-.vs/
+# Visual Studio specific ignores
+.vs/              # Visual Studio temporary files and cache
+*.suo             # Solution User Options (user-specific settings)
+*.opendb          # IntelliSense database
+*.VC.db           # Visual Studio code browsing database
+*.VC.opendb       # Visual Studio open database
 
 # Ignore Visual Studio build directories
 out/
 Debug/
 Release/
 x64/
+build/            # Custom build directories, e.g., from CMake
+
+# Keep the solution file
+!*.sln            # Allow saving the solution file
