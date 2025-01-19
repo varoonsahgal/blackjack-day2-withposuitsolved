@@ -33,6 +33,7 @@
 *.app
 
 # CMake
+CMakeFiles/
 CMakeCache.txt
 CMakeScripts/
 Testing/
