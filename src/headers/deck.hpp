@@ -4,15 +4,17 @@
 #include "card.h"
 #include <vector>
 
-class Deck{
+class Deck {
 
-    private:
-        std::vector<Card> deck; // Deck (Vector) of Cards
+private:
+    std::vector<Card> deck; // Deck (Vector) of Cards
 
-    public:
-        void initializeDeck();
-        int getSize();
-        Card deal();
+public:
+    void initializeDeck();
+    int getSize();
+    Card deal();
+    std::vector<Card> getCards();
+
 };
 
 #endif

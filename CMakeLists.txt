@@ -39,7 +39,7 @@ add_executable(
     src/print.cpp
     src/statistics.cpp
     src/compatible.cpp
-)
+ "src/ConsoleCard.cpp")
 
 # Enable testing
 enable_testing()
@@ -114,7 +114,7 @@ add_executable(
     src/statistics.cpp
     src/compatible.cpp
     src/dealer.cpp
-)
+ "src/ConsoleCard.cpp")
 
 
 
