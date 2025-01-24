@@ -3,17 +3,17 @@
 
 #include "card.h"
 #include <vector>
+#include "hand.hpp"
 
 class Human{
 
     protected:
-        std::vector<Card> hand;
-        int sum;
+        Hand hand; //this NO LONGER suffers from PO
 
     public:
         Human();
         int getSum();
-        void switchAce();
+        //void switchAce();
         void addCard(Card c);
         void clearCards();
         void printCards();

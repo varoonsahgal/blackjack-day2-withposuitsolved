@@ -1,18 +1,19 @@
 #include "headers/dealer.hpp"
 #include <iostream>
 #include "headers/consolecard.hpp"
+#include "headers/card.h"
 
-
-// Prints first card revealed and second card hidden
 void Dealer::printFirstCard() {
-    ConsoleCard consoleCard;
-    std::cout << "\n";
-    std::cout << ".------..------." << "\n";
-    std::cout << "|" << consoleCard.getPrintNumber(hand[0]) << ".--. || .--. |" << "\n";
-    consoleCard.printCardL1(hand[0]);
-    std::cout << "|  //  |" << "\n";
-    consoleCard.printCardL2(hand[0]);
-    std::cout << "|  //  |" << "\n";
-    std::cout << "| '--'" << consoleCard.getPrintNumber(hand[0]) << "|| '--' |" << "\n";
-    std::cout << "`------'`------'" << "\n";
+    if (!hand.getCards().empty()) {
+        //hand.front
+		Card firstCard = hand.getCards().front();
+        std::cout << ".------." << std::endl;
+        std::cout << "|" << firstCard.getPrintNumber() << ".--. |" << std::endl;
+        firstCard.printCardL1();
+        std::cout << std::endl;
+        firstCard.printCardL2();
+        std::cout << std::endl;
+        std::cout << "| '--'" << firstCard.getPrintNumber() << "|";
+        std::cout << std::endl << "`------`" << std::endl;
+    }
 }
